@@ -1,16 +1,5 @@
 defmodule OpenWeatherMap.Worker do
-  def loop do
-    receive do
-      {sender_pid, location} ->
-        send(sender_pid, {:ok, temperature_of(location)})
-      _ ->
-        IO.puts "don't know how to process this message"
-        #send(sender_pid(), "Unknow message")
-    end
-    loop()
-  end
-
-  defp temperature_of(location) do
+  def temperature_of(location) do
     result = url_for(location)
               |> HTTPoison.get
               |> parse_response
