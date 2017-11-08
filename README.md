@@ -415,7 +415,4 @@ Here, any response other than a successfuk one is treated as an error.
 That's basically it! You should now have a better understanding of how
 the worker works. Let's look at how processes are created in Elixir.
 
-**Creating processes for concurrency**
-
-
 ### Nov 2017 Oleg G.Kapranov
