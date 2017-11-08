@@ -1,8 +1,8 @@
 defmodule OpenWeatherMap.Worker do
   def temperature_of(location) do
-    result = url_for(location)
-              |> HTTPoison.get
-              |> parse_response
+    result = url_for(location) |> HTTPoison.get |> parse_response
+    # without using the pipe operator, you'd have to write the function like so:
+    # result = parse_response(HTTPoison.get(url_for(location)))
 
     case result do
       {:ok, temp} ->
