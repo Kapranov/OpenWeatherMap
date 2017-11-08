@@ -1,5 +1,14 @@
 defmodule OpenWeatherMap.Worker do
-  def temperature_of(location) do
+  def loop do
+    receive do
+      {sender_pid, location} ->
+        send(sender_pid, {:ok, temperature_of(location)})
+      _ -> IO.puts "don't know how to process this message"
+    end
+    loop()
+  end
+
+  defp temperature_of(location) do
     result = url_for(location) |> HTTPoison.get |> parse_response
     # without using the pipe operator, you'd have to write the function like so:
     # result = parse_response(HTTPoison.get(url_for(location)))
