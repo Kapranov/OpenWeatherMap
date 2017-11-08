@@ -13,7 +13,7 @@ We'll build a simple programm that reports the temperature of a given
 city/state/country. But first, let's learn about the Actor concurrency
 model.
 
-*Actor concurrency model*
+**Actor concurrency model**
 
 Erlang (and therefore Elixir) uses the Actor concurrency model. This
 means the following:
@@ -41,7 +41,7 @@ on inside her head, and she doesn't know what goes on inside my head. As
 you'll soon see, the actor concurrency model acts the same way: it
 responds only to certain kinds of messages.
 
-*Building a weather application*
+**Building a weather application**
 
 Conceptually, the application you'll create in this manual is simple
 (see figure bottom). The first version accepts a single argument
@@ -63,6 +63,8 @@ to be in the same order.
 How can you ensure that the responses are in the correct order? Read on.
 dear reader - you begin your meteorological adventures in Elixir next.
 
+```bash
+
                       ╔═══════════════════╗
                       ║   Weather APIs    ║
                       ╚══════╦═════╦══════╝
@@ -73,6 +75,7 @@ dear reader - you begin your meteorological adventures in Elixir next.
    <──────────────────╫   Weather Actor   ╫───────────────────>
        1. Request     ╚═══════════════════╝
 
-            **Weather actor handling a single request**
+               Weather actor handling a single request
+```
 
 ### Nov 2017 Oleg G.Kapranov
