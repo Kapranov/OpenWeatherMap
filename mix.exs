@@ -7,6 +7,7 @@ defmodule OpenWeatherMap.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      compilers: [:elixir_make | Mix.compilers],
       deps: deps()
     ]
   end
@@ -24,7 +25,8 @@ defmodule OpenWeatherMap.Mixfile do
       {:plug, "~> 1.4.3"},
       {:httpoison, "~> 0.13.0"},
       {:json, "~> 1.0.2"},
-      {:redis_connection_pool, "~> 0.1.5"}
+      {:redis_connection_pool, "~> 0.1.5"},
+      {:elixir_make, "~> 0.4"}
     ]
   end
 end
