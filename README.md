@@ -1,7 +1,7 @@
 # OpenWeatherMap
 
 ```elixir
-cities = ["Kiev", "Boston", "Washington", "New York", "Tampa", "Orlando", "Pensacola"]
+cities = ["Nassau", "Kiev", "Boston", "Tampa", "New York", "Washington", "Chicago", "Miami", "Orlando", "San Diego", "Pensacola"]
 
 OpenWeatherMap.temperatures_of(cities)
 ```
