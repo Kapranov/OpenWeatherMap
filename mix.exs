@@ -26,7 +26,10 @@ defmodule OpenWeatherMap.Mixfile do
       {:httpoison, "~> 0.13.0"},
       {:json, "~> 1.0.2"},
       {:redis_connection_pool, "~> 0.1.5"},
-      {:elixir_make, "~> 0.4"}
+      {:elixir_make, "~> 0.4"},
+      {:export, "~> 0.1.1"},
+      {:rubix,  "~> 0.0.2"},
+      {:erlport, "~> 0.9.8"}
     ]
   end
 end
