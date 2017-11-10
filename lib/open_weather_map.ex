@@ -19,7 +19,8 @@ defmodule OpenWeatherMap do
       )
     ]
 
-    Supervisor.start_link(children, strategy: :one_for_one)
+    opts = [strategy: :one_for_one, name: OpenWeatherMap.Supervisor]
+    Supervisor.start_link(children, opts)
   end
 
   def temperatures_of(cities) do
@@ -30,5 +31,4 @@ defmodule OpenWeatherMap do
       send worker_pid, {coordinator_pid, city}
     end)
   end
-
 end
